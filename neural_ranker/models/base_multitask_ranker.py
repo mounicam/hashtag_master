@@ -6,7 +6,7 @@ from torch.autograd import Variable
 
 class BaselineMultitaskRanker(torch.nn.Module):
     def __init__(self, epochs, lr_ranker, lr_bin):
-        """Base class for rankers without multi-task setting.
+        """Base class for rankers with multi-task setting.
 
         Parameters
         ----------
