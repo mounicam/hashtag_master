@@ -1,2 +1,6 @@
 word_breaker/*pyc
 word_breaker/__pycache__
+neural_ranker/*pyc
+neural_ranker/*/*pyc
+neural_ranker/__pycache__
+neural_ranker/*/__pycache__
