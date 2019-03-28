@@ -1,5 +1,5 @@
 # HashtagMaster
-HashtagMaster: Segmentation tool for hashtag segmentation
+HashtagMaster: Segmentation tool for hashtags
 
 - **word_breaker** : Code for word-breaker beam search code.
 - **neural_ranker**: Code for our neural pairwise ranker models. (4 variants)
