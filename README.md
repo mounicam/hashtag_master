@@ -1,6 +1,6 @@
 # HashtagMaster: Segmentation tool for hashtags
 
-This repository contains the code and resources from the following [paper](https://mounicam.github.io/WC_Lexicon_NRR.pdf)
+This repository contains the code and resources from the following [paper](https://mounicam.github.io/HashtagMaster_ACL_camera_ready_v2.pdf)
 
 
 ## Repo Structure: 
@@ -14,7 +14,7 @@ This repository contains the code and resources from the following [paper](https
 Please cite if you use the above resources for your research
 ```
 @InProceedings{ACL-2019-Maddela,
-  author = 	"Maddela, Mounica and Xu, Wei",
+  author = 	"Maddela, Mounica and Xu, Wei and Preoţiuc-Pietro, Daniel",
   title = 	"Multi-task Pairwise Neural Ranking for Hashtag Segmentation",
   booktitle = 	"Proceedings of the Association for Computational Linguistics (ACL)",
   year = 	"2019",
