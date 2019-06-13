@@ -8,7 +8,7 @@ This repository contains the code and resources from the following [paper](https
 
 1. ```neural_ranker```: Code for our neural pairwise ranker models. (4 variants) 
 
-1. ```data```: Task datasets and other feature files. All the features files for the experiment are added except the language models.
+1. ```data```: Task datasets and other feature files. All the features files for the experiment are added except the language models. We provided a small sample of the language models. Please email us for the whole language model. 
 
 ## Citation
 Please cite if you use the above resources for your research
