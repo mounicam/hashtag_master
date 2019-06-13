@@ -4,3 +4,4 @@ neural_ranker/*pyc
 neural_ranker/*/*pyc
 neural_ranker/__pycache__
 neural_ranker/*/__pycache__
+data_versions

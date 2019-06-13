@@ -37,6 +37,13 @@ def main(args):
             reranked_segs = rerank(segs, segs_feats, model, args.model)
             top_segmentations.append(reranked_segs)
 
+    if args.output is not None:
+        fp = open(args.output, 'w')
+        for segs in top_segmentations:
+            target = "".join(segs[0].split())
+            fp.write(target + "\t" + "\t".join([seg.strip() for seg in segs]) + "\n")
+        fp.close()
+
     # Evaluate metrics
     print("MRR:", mean_reciprocal_rank(test_gold_truths, top_segmentations))
     print("Accuracy@1:", accuracy(1, test_gold_truths, top_segmentations))
@@ -58,9 +65,13 @@ if __name__ == '__main__':
     parser.add_argument('--test', help='Path to test hashtags file. The format is same as traning dataset. \n',
                         dest='test', type=str)
     parser.add_argument('--test_topk', help='Path to top-k candidates file of traning dataset. \n'
-                                            'The format is same as traning dataset.',
+                                            'The format is same as training dataset.',
                         dest='test_topk', type=str)
-    parser.add_argument('--model', type=str, dest='model', help='Type of model. The input should be one'
+    parser.add_argument('--out', help='Path to reranked candidates file. \n'
+                                      'The output file is tab seperated. The format is: \n'
+                                      '<hashtag without #> <tab separated top-k candidates>.',
+                        dest='output', type=str)
+    parser.add_argument('--model', type=str, dest='model', default="mse_multi", help='Type of model. The input should be one'
                                                                 'of the strings: mse, mse_multi, mr, mr_multi')
     args = parser.parse_args()
     main(args)
